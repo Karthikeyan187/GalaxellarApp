@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+
+  <!--bootstrap css-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="crew">
+  <header>
+    <div class="topnav flex space-btwn" id="myTopnav">
+      <div class="nav-logo">
+        <img src="assets/shared/logo.svg" alt="logo image">
+      </div> 
+      <div class="overlay" id="myNav">
+        <div class="overlay-top flex">
+          <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"> <img src="assets/shared/icon-close.svg" alt=""></a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="navLink uppercase white ff-barlow l-space-md" style="font-size: 25px;"><span class="fw-bold">00</span> Home</a>
+          <a href="destination.html" class="navLink uppercase white ff-barlow l-space-md" style="font-size: 25px;"><span class="fw-bold">01</span> Destination</a>
+          <a href="crew.html" class="navLink uppercase white ff-barlow l-space-md active" style="font-size: 25px;"><span class="fw-bold">02</span> Crew</a>
+          <a href="technology.html" class="navLink uppercase white ff-barlow l-space-md" style="font-size: 25px;"><span class="fw-bold">03</span> Technology</a>
+        </div>
+      </div>
+      <span onclick="openNav()" class="openBtn"><img src="assets/shared/icon-hamburger.svg" alt=""></span>
+    </div>
+  </header>
+  <main id="crew-page" class="crew-page">
+    <h1 class="ff-barlow l-space-lg white uppercase fs-sm fw-light numbered-title"> <span class="grey"> 02 </span> Meet your crew</h1>
+
+    <div class="crew-wrapper">
+      <div class="crew-image">
+        <img src="kc.jpg" alt="" height="530px" class="active tab-image" id="tab-image1" style="border-radius: 20px;">
+        <img src="rss.jpg" alt="" height="500px" class="tab-image" id="tab-image2" style="border-radius: 20px;">
+        <img src="Sw.jpg" alt="" height="530px" class="tab-image" id="tab-image3"style="border-radius: 20px;">
+        <img src="AnoushehAnsari.jpg" alt="" height="480px" class="tab-image" id="tab-image4"style="border-radius: 20px;">
+      </div>
+
+      <div class="crew-main">
+        <div class="tab-navigation dot-indicator">
+          <button class="tablink active" onclick="openTab(event, 'tab1')" id="tablink1"></button>
+          <button class="tablink" onclick="openTab(event, 'tab2')" id="tablink2"></button>
+          <button class="tablink" onclick="openTab(event, 'tab3')" id="tablink3"></button>
+          <button class="tablink" onclick="openTab(event, 'tab4')" id="tablink4"></button>
+        </div>
+
+        <article id="tab1" class="white tabContent active">
+          <h5 class="uppercase ff-bellefair grey sub-title">Astronaut and Engineer</h5>
+    
+          <h2 class="uppercase ff-bellefair pt-1 title">KalpanaChawla</h2>
+    
+          <p class="ff-barlow lightgrey pt-2" style="font-size: 30px;">Kalpana Chawla was an Indian-American astronaut and engineer who flew on two space shuttle missions. She was the first woman of Indian origin in space and spent 31 days in space. Chawla died in the Columbia disaster in 2003, but her legacy inspires women in STEM fields.<a style="text-decoration: none;" href="https://en.wikipedia.org/wiki/Kalpana_Chawla">For more details..</a></p>
+        </article>
+
+        <article id="tab2" class="white tabContent">
+          <h5 class="uppercase ff-bellefair grey sub-title">military pilot and cosmonaut</h5>
+    
+          <h2 class="uppercase ff-bellefair pt-1 title">Rakesh Sharma</h2>
+    
+          <p class="ff-barlow lightgrey pt-2" style="font-size: 30px;">Rakesh Sharma is an Indian military pilot and who became the first Indian citizen in space in 1984. He flew aboard Soyuz T-11 and spent 7 days, 21 hours, and 40 minutes on the Salyut 7 space station and inspiring India's space program</p>
+          <p style="font-size: 25px;"><a style="text-decoration: none;" href="https://en.wikipedia.org/wiki/Rakesh_Sharma">For more details..</a></p>
+          
+        </article>
+    
+        <article id="tab3" class="white tabContent">
+          <h5 class="uppercase ff-bellefair grey sub-title">American astronaut</h5>
+    
+          <h2 class="uppercase ff-bellefair pt-2 title">Sunita Williams</h2>
+    
+          <p class="ff-barlow lightgrey pt-1" style="font-size: 30px;">Sunita Williams is an American astronaut who holds the record for most spacewalks by a woman. Born on September 19, 1965, she has spent 322 days in space and has flown on three missions. She is currently living and working on the International Space Station as part of Expedition.<a style="text-decoration: none;" href="https://en.wikipedia.org/wiki/Sunita_Williams">For more details..</a></p>
+         
+        </article>
+    
+        <article id="tab4" class="white tabContent">
+          <h5 class="uppercase ff-bellefair grey sub-title">Flight Engineer</h5>
+          <h2 class="uppercase ff-bellefair pt-1 title">Anousheh Ansari</h2>
+    
+          <p class="ff-barlow lightgrey pt-2" style="font-size: 30px;">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+          <p style="font-size: 25px;"><a style="text-decoration: none;"href="https://en.wikipedia.org/wiki/Anousheh_Ansari">For more details..</a></p>
+        </article>
+      </div>
+    </div>
+      
+      
+
+    
+
+    
+
+    
+  </main>
+  <!--00 Home
+  01 Destination
+  02 Crew
+  03 Technology
+
+  02 Meet your crew
+
+  Commander
+  Douglas Hurley
+
+  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+  and former NASA astronaut. He launched into space for the third time as 
+  commander of Crew Dragon Demo-2. -->
+  <script src="nav.js"></script>
+  <script src="tabs.js"></script>
+</body>
+</html>
